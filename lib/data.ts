@@ -15,11 +15,12 @@ export const projects: Project[] = [
     github: "https://github.com/peakforge-dev/luxmaster",
   },
   {
-    name: "TravianTimer",
-    category: "Coordination Tool",
+    name: "Legate",
+    category: "Companion App",
     description:
-      "Timing and coordination tool for alliance defense calls.",
-    github: "https://github.com/peakforge-dev/travian-timer",
+      "Companion tool for Travian Kingdoms — timing, coordination, and planning.",
+    status: "Active",
+    github: "https://github.com/peakforge-dev/legate",
   },
   {
     name: "RunSmart",
