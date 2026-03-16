@@ -46,6 +46,17 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="text-[14px] text-text-secondary leading-relaxed">
           {project.description}
         </p>
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 mt-3 text-[13px] text-text-muted hover:text-accent transition-colors"
+          >
+            GitHub
+            <span className="text-[11px]">&#x2197;</span>
+          </a>
+        )}
       </div>
     </article>
   );
