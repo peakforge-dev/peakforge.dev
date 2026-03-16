@@ -33,14 +33,14 @@ export function Header() {
             alt=""
             width={24}
             height={24}
-            className="w-6 h-6"
+            className="w-6 h-6 logo-adapt"
           />
           <Image
             src="/images/wordmark.png"
             alt={siteConfig.name}
             width={706}
             height={161}
-            className="h-[18px] w-auto"
+            className="h-[18px] w-auto logo-adapt"
             priority
           />
         </a>

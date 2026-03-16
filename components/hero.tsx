@@ -35,7 +35,7 @@ export function Hero() {
               alt=""
               width={256}
               height={256}
-              className="w-7 h-7 sm:w-8 sm:h-8"
+              className="w-7 h-7 sm:w-8 sm:h-8 logo-adapt"
             />
             <p className="text-[13px] font-medium tracking-widest uppercase text-accent">
               {siteConfig.name}

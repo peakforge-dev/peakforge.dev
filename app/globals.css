@@ -53,3 +53,9 @@ body {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .logo-adapt {
+    filter: invert(1);
+  }
+}

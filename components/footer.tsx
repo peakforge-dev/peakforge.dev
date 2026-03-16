@@ -14,7 +14,7 @@ export function Footer() {
               alt=""
               width={256}
               height={256}
-              className="w-6 h-6"
+              className="w-6 h-6 logo-adapt"
             />
             <div>
               <p className="text-[14px] font-semibold text-text">
