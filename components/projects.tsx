@@ -1,29 +1,28 @@
+import Image from "next/image";
 import { projects } from "@/lib/data";
 import type { Project } from "@/lib/data";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group border border-border rounded-lg overflow-hidden bg-bg hover:border-border/80 transition-colors">
-      {/* Visual placeholder */}
-      <div className="aspect-[16/10] bg-bg-subtle border-b border-border relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-12 h-12 rounded-lg border border-border bg-bg flex items-center justify-center">
-            <span className="text-[18px] font-semibold text-text-muted select-none">
-              {project.name.charAt(0)}
-            </span>
+      {/* Project visual */}
+      <div className="aspect-[16/10] border-b border-border relative overflow-hidden">
+        {project.icon ? (
+          <Image
+            src={project.icon}
+            alt={`${project.name} icon`}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-bg-subtle flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg border border-border bg-bg flex items-center justify-center">
+              <span className="text-[18px] font-semibold text-text-muted select-none">
+                {project.name.charAt(0)}
+              </span>
+            </div>
           </div>
-        </div>
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true">
-          <svg width="100%" height="100%">
-            <defs>
-              <pattern id={`grid-${project.name}`} width="24" height="24" patternUnits="userSpaceOnUse">
-                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" strokeWidth="0.5" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill={`url(#grid-${project.name})`} />
-          </svg>
-        </div>
+        )}
       </div>
 
       <div className="p-5">

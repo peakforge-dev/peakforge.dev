@@ -5,6 +5,7 @@ export interface Project {
   status?: string;
   github?: string;
   appStore?: string;
+  icon?: string;
 }
 
 export const projects: Project[] = [
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     status: "Active",
     github: "https://github.com/peakforge-dev/luxmaster",
     appStore: "https://apps.apple.com/ch/app/luxmaster/id6760295083",
+    icon: "/images/icon-luxmaster.png",
   },
   {
     name: "Legate",
@@ -23,6 +25,7 @@ export const projects: Project[] = [
       "Companion tool for Travian Kingdoms — timing, coordination, and planning.",
     status: "Active",
     github: "https://github.com/peakforge-dev/legate",
+    icon: "/images/icon-legate.png",
   },
   {
     name: "RunSmart",
