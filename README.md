@@ -1,24 +1,26 @@
 # peakforge.dev
 
-Website for Peakforge — an independent software studio.
+Website for [Peakforge](https://peakforge.dev) — independent software studio building simple apps and useful tools.
 
 ## Stack
 
-Single-file HTML/CSS website. No build step required.
-
-## Structure
-
-```
-peakforge.dev
- ├─ index.html   # Main website
- ├─ images/      # Image assets
- └─ README.md
-```
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
 
 ## Development
 
-Open `index.html` in a browser. No dependencies needed.
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy
 
-Static hosting. Works with GitHub Pages, Netlify, Vercel, or any static host.
+Push to `main` — Vercel deploys automatically.
+
+## License
+
+© Peakforge
