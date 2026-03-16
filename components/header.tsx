@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
 const navLinks = [
@@ -27,11 +28,22 @@ export function Header() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-[15px] font-semibold tracking-tight text-text"
-        >
-          {siteConfig.name}
+        <a href="#" className="flex items-center gap-2.5">
+          <Image
+            src="/images/logo-icon-256.png"
+            alt=""
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+          <Image
+            src="/images/wordmark.png"
+            alt={siteConfig.name}
+            width={706}
+            height={161}
+            className="h-[18px] w-auto"
+            priority
+          />
         </a>
 
         <nav className="hidden sm:flex items-center gap-8">

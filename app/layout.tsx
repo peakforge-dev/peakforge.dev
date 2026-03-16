@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   description:
     "Independent software studio building simple apps and useful tools.",
   metadataBase: new URL("https://peakforge.dev"),
+  icons: {
+    icon: [
+      { url: "/images/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-64.png", sizes: "64x64", type: "image/png" },
+    ],
+    apple: "/images/logo-icon-256.png",
+  },
   openGraph: {
     title: "Peakforge — Build useful things",
     description:

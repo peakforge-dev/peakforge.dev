@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
 function GridPattern() {
@@ -28,9 +29,18 @@ export function Hero() {
       <GridPattern />
       <div className="relative mx-auto max-w-6xl px-6 py-32 md:py-40">
         <div className="max-w-2xl">
-          <p className="text-[13px] font-medium tracking-widest uppercase text-accent mb-6">
-            {siteConfig.name}
-          </p>
+          <div className="flex items-center gap-3 mb-6">
+            <Image
+              src="/images/logo-icon-256.png"
+              alt=""
+              width={256}
+              height={256}
+              className="w-7 h-7 sm:w-8 sm:h-8"
+            />
+            <p className="text-[13px] font-medium tracking-widest uppercase text-accent">
+              {siteConfig.name}
+            </p>
+          </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] text-text">
             Build useful things.
           </h1>
