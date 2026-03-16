@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   status?: string;
   github?: string;
+  appStore?: string;
 }
 
 export const projects: Project[] = [
@@ -13,6 +14,7 @@ export const projects: Project[] = [
     description: "Professional light measurement using the iPhone camera.",
     status: "Active",
     github: "https://github.com/peakforge-dev/luxmaster",
+    appStore: "https://apps.apple.com/ch/app/luxmaster/id6760295083",
   },
   {
     name: "Legate",
