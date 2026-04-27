@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { projects } from "@/lib/data";
 import type { Project } from "@/lib/data";
 
-function ProjectCard({ project }: { project: Project }) {
+const isInternal = (url: string) => url.startsWith("/");
+
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group border border-border rounded-lg overflow-hidden bg-bg hover:border-border/80 transition-colors">
       {/* Project visual */}
@@ -47,15 +50,25 @@ function ProjectCard({ project }: { project: Project }) {
         </p>
         <div className="flex items-center gap-4 mt-3">
           {project.url && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-accent hover:text-accent-hover transition-colors"
-            >
-              Open
-              <span className="text-[11px]">&#x2197;</span>
-            </a>
+            isInternal(project.url) ? (
+              <Link
+                href={project.url}
+                className="inline-flex items-center gap-1.5 text-[13px] font-medium text-accent hover:text-accent-hover transition-colors"
+              >
+                Open
+                <span className="text-[11px]">&rarr;</span>
+              </Link>
+            ) : (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[13px] font-medium text-accent hover:text-accent-hover transition-colors"
+              >
+                Open
+                <span className="text-[11px]">&#x2197;</span>
+              </a>
+            )
           )}
           {project.appStore && (
             <a

@@ -5,8 +5,8 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
 const navLinks = [
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Header() {
@@ -27,7 +27,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5">
+        <a href="/" className="flex items-center gap-2.5">
           <Image
             src="/images/logo-icon-256.png"
             alt=""

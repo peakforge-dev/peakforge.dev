@@ -36,6 +36,16 @@ export const projects: Project[] = [
     github: "https://github.com/peakforge-dev/runsmart",
   },
   {
+    name: "DevTools",
+    category: "Developer Utilities",
+    description:
+      "A growing collection of small tools for everyday workflows.",
+    url: "/tools",
+  },
+];
+
+export const tools: Project[] = [
+  {
     name: "PfP",
     category: "Planning Tool",
     description:
@@ -43,12 +53,6 @@ export const projects: Project[] = [
     status: "Active",
     url: "https://pfp.peakforge.dev",
     github: "https://github.com/peakforge-dev/PfP",
-  },
-  {
-    name: "DevTools",
-    category: "Developer Utility",
-    description:
-      "Small automation utilities for fast and reliable workflows.",
   },
 ];
 
