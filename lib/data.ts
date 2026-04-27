@@ -5,6 +5,7 @@ export interface Project {
   status?: string;
   github?: string;
   appStore?: string;
+  url?: string;
   icon?: string;
 }
 
@@ -33,6 +34,15 @@ export const projects: Project[] = [
     description: "Practical training planning for endurance athletes.",
     status: "In Development",
     github: "https://github.com/peakforge-dev/runsmart",
+  },
+  {
+    name: "PfP",
+    category: "Planning Tool",
+    description:
+      "Pflanzenflächenplanung — Flächen- und Sortimentsplanung für Gartencenter.",
+    status: "Active",
+    url: "https://pfp.peakforge.dev",
+    github: "https://github.com/peakforge-dev/PfP",
   },
   {
     name: "DevTools",

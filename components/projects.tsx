@@ -46,6 +46,17 @@ function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
         <div className="flex items-center gap-4 mt-3">
+          {project.url && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-accent hover:text-accent-hover transition-colors"
+            >
+              Open
+              <span className="text-[11px]">&#x2197;</span>
+            </a>
+          )}
           {project.appStore && (
             <a
               href={project.appStore}
