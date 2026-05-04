@@ -48,9 +48,9 @@ export function Contact() {
               href={siteConfig.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-accent/30 hover:bg-bg-subtle transition-colors"
+              className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-[#25D366]/40 hover:bg-bg-subtle transition-colors"
             >
-              <div className="w-10 h-10 rounded-md bg-bg-subtle border border-border flex items-center justify-center text-text-muted group-hover:text-accent transition-colors">
+              <div className="w-10 h-10 rounded-md bg-bg-subtle border border-border flex items-center justify-center text-text-muted group-hover:text-[#25D366] transition-colors">
                 <svg
                   width="18"
                   height="18"
@@ -73,9 +73,9 @@ export function Contact() {
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-accent/30 hover:bg-bg-subtle transition-colors"
+              className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-[#181717]/30 hover:bg-bg-subtle transition-colors"
             >
-              <div className="w-10 h-10 rounded-md bg-bg-subtle border border-border flex items-center justify-center text-text-muted group-hover:text-accent transition-colors">
+              <div className="w-10 h-10 rounded-md bg-bg-subtle border border-border flex items-center justify-center text-text-muted group-hover:text-[#181717] transition-colors">
                 <svg
                   width="18"
                   height="18"
