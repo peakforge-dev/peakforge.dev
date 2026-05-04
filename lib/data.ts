@@ -19,7 +19,7 @@ export const projects: Project[] = [
     github: "https://github.com/peakforge-dev/luxmaster",
     appStore: "https://apps.apple.com/ch/app/luxmaster/id6760295083",
     icon: "/images/icon-luxmaster.png",
-    thumbnail: "/images/luxmaster-thumbnail-appstore.png",
+    thumbnail: "/images/luxmaster-thumbnail-readable.png",
   },
   {
     name: "Legate",
