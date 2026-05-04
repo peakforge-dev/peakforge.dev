@@ -64,5 +64,9 @@ export const siteConfig = {
   description: "Peakforge builds small useful software.",
   github: "https://github.com/peakforge-dev",
   email: "hello@peakforge.dev",
+  whatsapp: {
+    label: "+41 76 208 55 22",
+    url: "https://wa.me/41762085522?text=Hi%20Peakforge%2C%20I%20have%20a%20project%20inquiry.",
+  },
   domain: "peakforge.dev",
 } as const;
