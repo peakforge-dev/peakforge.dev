@@ -7,6 +7,7 @@ export interface Project {
   appStore?: string;
   url?: string;
   icon?: string;
+  thumbnail?: string;
 }
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     github: "https://github.com/peakforge-dev/luxmaster",
     appStore: "https://apps.apple.com/ch/app/luxmaster/id6760295083",
     icon: "/images/icon-luxmaster.png",
+    thumbnail: "/images/luxmaster-thumbnail.png",
   },
   {
     name: "Legate",

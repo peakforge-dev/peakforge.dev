@@ -6,14 +6,16 @@ import type { Project } from "@/lib/data";
 const isInternal = (url: string) => url.startsWith("/");
 
 export function ProjectCard({ project }: { project: Project }) {
+  const visual = project.thumbnail ?? project.icon;
+
   return (
     <article className="group border border-border rounded-lg overflow-hidden bg-bg hover:border-border/80 transition-colors">
       {/* Project visual */}
       <div className="aspect-[16/10] border-b border-border relative overflow-hidden">
-        {project.icon ? (
+        {visual ? (
           <Image
-            src={project.icon}
-            alt={`${project.name} icon`}
+            src={visual}
+            alt={`${project.name} project preview`}
             fill
             className="object-cover"
           />
