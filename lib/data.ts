@@ -65,8 +65,8 @@ export const siteConfig = {
   github: "https://github.com/peakforge-dev",
   email: "hello@peakforge.dev",
   whatsapp: {
-    label: "+41 76 208 55 22",
-    url: "https://wa.me/41762085522?text=Hi%20Peakforge%2C%20I%20have%20a%20project%20inquiry.",
+    label: "Message on WhatsApp",
+    href: "/whatsapp",
   },
   domain: "peakforge.dev",
 } as const;

@@ -45,7 +45,7 @@ export function Contact() {
             </a>
 
             <a
-              href={siteConfig.whatsapp.url}
+              href={siteConfig.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-accent/30 hover:bg-bg-subtle transition-colors"
