@@ -17,6 +17,9 @@ export function ProjectCard({ project }: { project: Project }) {
             src={visual}
             alt={`${project.name} project preview`}
             fill
+            sizes="(min-width: 768px) 540px, calc(100vw - 48px)"
+            quality={project.thumbnail ? 100 : 95}
+            unoptimized={Boolean(project.thumbnail)}
             className="object-cover"
           />
         ) : (
