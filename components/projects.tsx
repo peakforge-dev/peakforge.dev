@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/data";
 import type { Project } from "@/lib/data";
+import { EventBadge } from "@/components/event-badge";
 
 const isInternal = (url: string) => url.startsWith("/");
 
@@ -18,8 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
             alt={`${project.name} project preview`}
             fill
             sizes="(min-width: 768px) 540px, calc(100vw - 48px)"
-            quality={project.thumbnail ? 100 : 95}
-            unoptimized={Boolean(project.thumbnail)}
+            quality={100}
             className="object-cover"
           />
         ) : (
@@ -31,6 +31,56 @@ export function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
         )}
+        {project.overlay && (() => {
+          const dark = project.overlay.tone === "dark";
+          const primary = dark ? "text-[#F2E6C8]" : "text-[#1A0700]";
+          const eyebrowColor = dark ? "text-[#DCAE55]" : "text-[#2A0F00]/75";
+          const unitColor = dark ? "text-[#F2E6C8]/55" : "text-[#1A0700]/65";
+          const taglineColor = dark ? "text-[#F2E6C8]/55" : "text-[#2A0F00]/60";
+          const dotBg = dark ? "bg-[#DCAE55]" : "bg-white";
+          const dotShadow = dark
+            ? "0 0 8px rgba(220,174,85,0.95), 0 0 18px rgba(220,174,85,0.55)"
+            : "0 0 8px rgba(255,255,255,0.95), 0 0 18px rgba(255,240,180,0.7)";
+          return (
+            <div className={`absolute inset-0 flex flex-col items-center justify-center text-center px-6 select-none pointer-events-none ${primary}`}>
+              {project.overlay!.eyebrow && (
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full ${dotBg}`}
+                    style={{ boxShadow: dotShadow }}
+                    aria-hidden="true"
+                  />
+                  <span className={`text-[10px] font-bold uppercase tracking-[0.32em] ${eyebrowColor}`}>
+                    {project.overlay!.eyebrow}
+                  </span>
+                </div>
+              )}
+              {project.overlay!.stat && (
+                <div className="flex items-baseline gap-1.5 leading-none tabular-nums">
+                  <span className="text-[56px] sm:text-[72px] font-black tracking-[-0.04em]">
+                    {project.overlay!.stat.value}
+                  </span>
+                  {project.overlay!.stat.unit && (
+                    <span className={`text-[30px] sm:text-[36px] font-bold tracking-[-0.04em] ${unitColor}`}>
+                      {project.overlay!.stat.unit}
+                    </span>
+                  )}
+                </div>
+              )}
+              {project.overlay!.wordmark && (
+                <div className="mt-4 text-[20px] sm:text-[24px] font-extrabold tracking-[-0.03em]">
+                  {project.overlay!.wordmark}
+                </div>
+              )}
+              {project.overlay!.tagline && (
+                <div className={`mt-0.5 text-[11px] sm:text-[12px] font-medium ${taglineColor}`}>
+                  {project.overlay!.tagline}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+        {project.event && <EventBadge event={project.event} />}
       </div>
 
       <div className="p-5">

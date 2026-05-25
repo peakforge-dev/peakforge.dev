@@ -31,3 +31,6 @@ next-env.d.ts
 # claude
 .claude/
 tasks/
+
+# local scratch (mockup iterations, experiments)
+tmp/
